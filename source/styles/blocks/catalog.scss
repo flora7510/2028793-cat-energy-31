@@ -33,7 +33,7 @@
   }
 }
 
-.catalog__title::before {
+.catalog__item--more::before {
   content: "";
   width: 30px;
   height: 30px;
@@ -44,7 +44,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .catalog__title::before {
+  .catalog__item--more::before {
     width: 60px;
     height: 60px;
   }
