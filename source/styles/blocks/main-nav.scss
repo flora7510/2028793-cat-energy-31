@@ -2,13 +2,7 @@
   background-color: #ffffff;
 }
 
-@media screen and (min-width: 768px) {
-  .main-nav {
-    background-color: #ffffff;
-  }
-}
-
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: $desktop-width) {
   .main-nav {
     background-color: #68b738;
   }
@@ -32,4 +26,17 @@
   width: 24px;
   height: 24px;
   border: none;
+}
+
+.main-nav__list {
+  display: none;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .main-nav__list {
+    display: flex;
+    gap: 33px;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
