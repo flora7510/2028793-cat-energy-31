@@ -1,7 +1,5 @@
 .programs {
   background-color: #ffffff;
-  width: 100%;
-  padding: 0 20px;
   box-sizing: border-box;
   margin-bottom: 20px;
 }
@@ -10,9 +8,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 320px;
   box-sizing: border-box;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .programs__list {
@@ -32,7 +30,7 @@
   padding: 30px 33px 18px 20px;
 }
 
-.programs__item::before {
+.programs__item--slim::before {
   content: "";
   background-color: $basic_green;
   width: 50px;
@@ -40,8 +38,8 @@
   border-radius: 50%;
   display: block;
   position: absolute;
-  top: -2px;
-  left: 8px;
+  top: 21px;
+  left: 20px;
 }
 
 .programs__item--slim::after {
@@ -52,8 +50,20 @@
   width: 36px;
   height: 50px;
   position: absolute;
-  top: -2px;
-  left: 8px;
+  top: 21px;
+  left: 27px;
+}
+
+.programs__item--pro::before {
+  content: "";
+  background-color: $basic_green;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 24px;
+  left: 21px;
 }
 
 .programs__item--pro::after {
@@ -64,8 +74,8 @@
   width: 67px;
   height: 28px;
   position: absolute;
-  top: 11px;
-  left: -10px;
+  top: 35px;
+  left: 13px;
 }
 
 .programs__caption {
@@ -76,9 +86,9 @@
   font-weight: 400;
   text-transform: uppercase;
   order: -1;
-  text-align: center;
   margin: 0;
   margin-bottom: 29px;
+  padding-left: 70px;
 }
 
 .programs__description {
@@ -88,22 +98,13 @@
   color: $special_dark-grey-second;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 38px;
-}
-
-.programs__description::after {
-  content: "";
-  border: none;
-  background-color: #d9d9d9;
-  height: 1px;
-  width: 240px;
-  display: block;
-  position: absolute;
-  top: 206px;
-  left: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .programs__link {
+  position: relative;
   font-family: $secondary-font;
   font-size: 16px;
   line-height: 16px;
@@ -111,9 +112,15 @@
   font-weight: 400;
   text-transform: uppercase;
   text-decoration: none;
+  display: block;
+  width: auto;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.programs__link::after {
+.programs__item--slim .programs__link::after {
   content: "";
   background-color: #000000;
   width: 24px;
@@ -124,8 +131,14 @@
   mask-repeat: no-repeat;
   mask-size: 24px 12px;
   position: absolute;
-  top: 228px;
-  left: 119px;
+  top: 50%;
+  left: 15px;
+
+  &:hover,
+  &:focus {
+    width: 32px;
+    mask-size: 32px 12px;
+  }
 }
 
 @media screen and (min-width: $tablet-width) {
