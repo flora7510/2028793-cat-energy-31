@@ -1,12 +1,12 @@
 .main-footer {
-  padding: 0 20px;
+  margin: 0;
   box-sizing: border-box;
   background-color: $basic_grey;
 }
 
 .main-footer__wrapper {
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 40px 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;

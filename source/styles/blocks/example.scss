@@ -1,13 +1,14 @@
 .example {
   background-color: #eaeaea;
-  width: 100%;
   padding-top: 25px;
-  padding-bottom: 40px;
+  margin-bottom: 40px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .example__wrapper {
-  box-sizing: border-box;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -95,52 +96,80 @@
   text-align: center;
 }
 
+.example__image {
+  display: block;
+}
+
 .example__slider {
-  position: relative;
+  margin: 0 20px;
+  box-sizing: border-box;
+}
+
+.slider {
+  --curtain-place: 0.5;
+  display: grid;
+  grid-template-columns: calc(var(--curtain-place) * 100%) auto calc((1 - var(--curtain-place)) * 100%);
+  width: min(100%, 560px);
+  aspect-ratio: 280/256;
+}
+
+.slider__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  &--cat-before {
+    object-position: left;
+  }
+
+  &--cat-after {
+    object-position: right;
+  }
+}
+
+.slider__box {
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  margin: 0 -2px;
+  width: 4px;
+  height: 100%;
+  border-radius: 2px;
+  color: var(--curtain-color, $special_grey-second);
+  background-color: currentColor;
+  cursor: col-resize;
+  transition: color 0.2s, opacity 0.2s;
+
+  &:hover {
+    --curtain-color: #68b738;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .slider__button {
-  background-color: #666666;
-  width: 4px;
-  height: 100%;
-  border: none;
-  border-radius: 2px;
-  cursor: pointer;
+  box-sizing: border-box;
+  display: grid;
+  margin: -18px;
   padding: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-
-.slider__button::before {
-  content: "";
+  width: 40px;
+  height: 40px;
+  color: inherit;
+  border: 2px solid currentColor;
+  border-radius: 20px;
   background-color: #ffffff;
-  width: 40px;
-  height: 40px;
-  border: 2px solid #666666;
-  border-radius: 50%;
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%);
-}
+  cursor: col-resize;
 
-.slider__button::after {
-  content: "";
-  background-color: #666666;
-  width: 40px;
-  height: 40px;
-  border: none;
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%);
-  mask-image: url("../../icons/stack.svg#icon-slider");
-  mask-position: 9px 13px;
-  mask-repeat: no-repeat;
-  mask-size: 24px 18px;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: currentColor;
+    mask-image: url("../../icons/stack.svg#icon-slider");
+  }
 }
 
 @media screen and (min-width: $tablet-width) {
