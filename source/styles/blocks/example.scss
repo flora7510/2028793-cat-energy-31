@@ -1,7 +1,7 @@
 .example {
   background-color: #eaeaea;
   padding-top: 25px;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -43,15 +43,15 @@
 .example__list {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 32px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 34px;
   max-width: 280px;
 }
 
 .example__box {
   width: 124px;
-  min-height: 56px;
+  height: 54px;
   border: 1px solid $special_grey;
   border-radius: 3px;
 }
@@ -109,7 +109,7 @@
   --curtain-place: 0.5;
   display: grid;
   grid-template-columns: calc(var(--curtain-place) * 100%) auto calc((1 - var(--curtain-place)) * 100%);
-  width: min(100%, 560px);
+  width: min(100%, 280px);
   aspect-ratio: 280/256;
 }
 
@@ -169,6 +169,9 @@
     height: 100%;
     background-color: currentColor;
     mask-image: url("../../icons/stack.svg#icon-slider");
+    mask-position: 50%;
+    mask-size: 24px 18px;
+    mask-repeat: no-repeat;
   }
 }
 

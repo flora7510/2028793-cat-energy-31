@@ -42,6 +42,7 @@
   height: 60px;
   display: block;
   position: absolute;
+  top: -1px;
 }
 
 .advantages__item--benefit::before {
@@ -75,7 +76,7 @@
   color: #444444;
   font-weight: 400;
   margin: 0;
-  padding-left: 80px;
+  padding: 3px 0 3px 80px;
 }
 
 @media screen and (min-width: $tablet-width) {

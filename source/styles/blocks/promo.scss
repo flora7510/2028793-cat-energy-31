@@ -76,7 +76,8 @@
     max-width: 768px;
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 65px 72px 0 120px;
+    padding: 65px 72px 506px 120px;
+    position: relative;
   }
 
   .promo__caption {
@@ -92,14 +93,14 @@
     font-size: 20px;
     line-height: 20px;
     color: #000000;
-    margin-bottom: 50px;
+    margin-bottom: 47px;
     order: -2;
   }
 
-  .promo__product {
-    position: relative;
-    left: -130px;
-    top: -14px;
+  .promo__wrapper picture {
+    position: absolute;
+    left: 29px;
+    top: 262px;
   }
 
   .promo__button {

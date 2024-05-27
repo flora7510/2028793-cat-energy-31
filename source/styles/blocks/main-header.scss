@@ -41,11 +41,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0;
   }
 
   .main-header__logo {
     grid-template-columns: 60px 1fr;
     gap: 13px;
+    padding: 0;
   }
 }
 

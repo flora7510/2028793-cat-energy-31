@@ -11,7 +11,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
+}
+
+.logo img {
+  display: block;
 }
 
 .htmlacademy-link {
@@ -23,7 +27,7 @@
   text-decoration: none;
   display: block;
   position: relative;
-  padding-right: 167px;
+  padding: 7px 167px 7px 0;
 }
 
 .htmlacademy-link:hover,
@@ -35,52 +39,57 @@
   opacity: 0.3;
 }
 
+
 .main-footer__list {
   margin: 0;
-  padding: 0;
+  padding: 20px 0;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
   gap: 24px;
+  width: 100%;
 }
 
 .main-footer__link--vkontakte::before {
   content: "";
   background-color: $special_grey-second;
-  width: 27px;
-  height: 17px;
+  width: 28px;
+  height: 22px;
   border: none;
   display: block;
   mask-image: url("../../icons/stack.svg#icon_vkontakte");
   mask-position: 100%;
   mask-repeat: no-repeat;
-  mask-size: 27px 17px;
+  mask-size: 28px 22px;
 }
 
 .main-footer__link--youtube::before {
   content: "";
   background-color: $special_grey-second;
-  width: 27px;
-  height: 17px;
+  width: 28px;
+  height: 22px;
   border: none;
   display: block;
   mask-image: url("../../icons/stack.svg#icon_youtube");
   mask-position: 50%;
   mask-repeat: no-repeat;
-  mask-size: 27px 17px;
+  mask-size: 28px 22px;
 }
 
 .main-footer__link--telegram::before {
   content: "";
   background-color: $special_grey-second;
-  width: 27px;
-  height: 17px;
+  width: 28px;
+  height: 22px;
   border: none;
   display: block;
   mask-image: url("../../icons/stack.svg#icon_telegram");
   mask-position: 100%;
   mask-repeat: no-repeat;
-  mask-size: 27px 17px;
+  mask-size: 28px 22px;
 }
 
 .main-footer__link--vkontakte:hover::before,
@@ -101,7 +110,8 @@
 .htmlacademy-link::before {
   content: "";
   position: absolute;
-  left: 250px;
+  left: 253px;
+  top: -2px;
   background-color: $special_grey-second;
   width: 27px;
   height: 34px;

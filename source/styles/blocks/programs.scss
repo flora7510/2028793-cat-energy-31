@@ -104,7 +104,6 @@
 }
 
 .programs__link {
-  position: relative;
   font-family: $secondary-font;
   font-size: 16px;
   line-height: 16px;
@@ -112,8 +111,9 @@
   font-weight: 400;
   text-transform: uppercase;
   text-decoration: none;
-  display: block;
   width: auto;
+  position: relative;
+  padding: 4px 0;
 
   &:active {
     opacity: 0.3;
@@ -123,16 +123,39 @@
 .programs__item--slim .programs__link::after {
   content: "";
   background-color: #000000;
-  width: 24px;
+  width: 32px;
   height: 12px;
   display: block;
   mask-image: url("../../icons/stack.svg#icon_arrow");
   mask-position: 100%;
   mask-repeat: no-repeat;
-  mask-size: 24px 12px;
+  mask-size: 32px 12px;
   position: absolute;
-  top: 50%;
-  left: 15px;
+  top: 24%;
+  left: 102px;
+  transition: transform 0.2s;
+
+  &:hover,
+  &:focus {
+    width: 32px;
+    mask-size: 32px 12px;
+  }
+}
+
+.programs__item--pro .programs__link::after {
+  content: "";
+  background-color: #000000;
+  width: 32px;
+  height: 12px;
+  display: block;
+  mask-image: url("../../icons/stack.svg#icon_arrow");
+  mask-position: 100%;
+  mask-repeat: no-repeat;
+  mask-size: 32px 12px;
+  position: absolute;
+  top: 22%;
+  left: 98px;
+  transition: transform 0.2s;
 
   &:hover,
   &:focus {
