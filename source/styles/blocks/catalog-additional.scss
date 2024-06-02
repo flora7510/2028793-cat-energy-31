@@ -1,5 +1,5 @@
 .catalog-additional {
-  margin-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 .catalog-additional__wrapper {
@@ -14,17 +14,36 @@
   color: #000000;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 49px;
+  margin-bottom: 34px;
   text-align: left;
+  padding-top: 24px;
+  position: relative;
+  width: fit-content;
+  background: #ffffff;
+  box-shadow:
+    -40px 0 0 0 #ffffff,
+    41px 0 0 0 #ffffff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 57%;
+    box-shadow: 100vw 0 0 0 $basic_green;
+    height: 2px;
+    background-color: $basic_green;
+    right: 0;
+    width: 100vw;
+    z-index: -1;
+  }
 }
 
 .catalog-additional__list {
   margin: 0;
-  margin-bottom: 54px;
+  margin-bottom: 35px;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 31px;
+  gap: 12px;
 }
 
 .catalog-additional__item {
@@ -33,18 +52,13 @@
   flex-direction: column;
   gap: 13px;
   position: relative;
+  padding-bottom: 19px;
+  border-bottom: 1px solid $special_grey;
 }
 
-.catalog-additional__item::after {
-  content: "";
-  border: none;
-  min-width: 320px;
-  height: 1px;
-  background-color: $basic_grey-second;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 118px;
-  right: -20px;
+.catalog-additional__item:first-child {
+  padding-top: 13px;
+  border-top: 1px solid $special_grey;
 }
 
 .catalog-additional__title {
@@ -69,6 +83,8 @@
   color: #444444;
   font-weight: 400;
   list-style-type: none;
+  display: flex;
+  justify-content: space-between;
 }
 
 .catalog-additional__button {
@@ -109,6 +125,7 @@
   font-weight: 400;
   position: relative;
   text-align: center;
+  margin: 0;
 }
 
 .catalog-additional__text::before {
@@ -118,14 +135,28 @@
   background-image: url("../../icons/stack.svg#icon_gift");
   background-size: 78px 80px;
   position: absolute;
-  top: -134px;
-  left: 40px;
+  top: -130px;
+  left: 43px;
 }
 
 @media screen and (min-width: $tablet-width) {
+  .catalog-additional {
+    padding-bottom: 80px;
+  }
+
+  .catalog-additional__wrapper {
+    padding: 0 30px;
+  }
+
+  .catalog-additional__wrapper--title {
+    padding-left: 70px;
+  }
+
   .catalog-additional__caption {
     font-size: 32px;
     line-height: 32px;
+    padding-top: 8px;
+    margin-bottom: 82px;
   }
 
   .catalog-additional__title {
@@ -133,18 +164,32 @@
     line-height: 20px;
   }
 
+  .catalog-additional__list {
+    gap: 0;
+    margin-bottom: 69px;
+  }
+
+  .catalog-additional__item:first-child {
+    padding-top: 26px;
+    border-top: 1px solid $special_grey;
+  }
+
   .catalog-additional__item {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto min-content;
+    padding: 26px 38px 28px;
+    gap: 22px;
+    border: 1px solid $special_grey;
+    border-top: none;
   }
 
   .catalog-additional__item-info {
     font-size: 16px;
     line-height: 20px;
     display: flex;
-    justify-content: space-between;
-    padding-left: 100px;
+    justify-content: flex-end;
+    gap: 55px;
   }
 
   .catalog-additional__button {
@@ -174,6 +219,10 @@
 }
 
 @media screen and (min-width: $desktop-width) {
+  .catalog-additional {
+    padding-bottom: 30px;
+  }
+
   .catalog-additional__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -184,6 +233,12 @@
   .catalog-additional__caption {
     font-size: 40px;
     line-height: 40px;
+    padding-top: 0;
+    margin-bottom: 80px;
+  }
+
+  .catalog-additional__item:first-child {
+    padding-top: 14px;
   }
 
   .catalog-additional__item {
@@ -191,10 +246,23 @@
     grid-template-columns: 1fr 1fr 244px;
     grid-template-rows: auto;
     width: 896px;
+    padding: 14px 0 16px;
+    align-items: center;
+    border: none;
+    border-bottom: 1px solid $special_grey;
+  }
+
+  .catalog-additional__item-info {
+    justify-content: space-between;
+  }
+
+  .catalog-additional__item-info span {
+    padding-right: 22px;
   }
 
   .catalog-additional__button {
     grid-column: 3/4;
+    margin: 0;
   }
 
   .catalog-additional__gift {
@@ -213,10 +281,11 @@
   .catalog-additional__text {
     padding: 0;
     text-align: center;
+    margin-top: 137px;
   }
 
   .catalog-additional__text::before {
-    top: -90px;
-    left: 42px;
+    top: -127px;
+    left: 45px;
   }
 }

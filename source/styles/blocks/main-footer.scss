@@ -134,12 +134,18 @@
 
 @media screen and (min-width: $tablet-width) {
   .main-footer__wrapper {
-    max-width: 768px;
-    padding: 55px 30px;
+    padding: 57px 30px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 40px;
+  }
+
+  .main-footer__list {
+    border-top: none;
+    border-bottom: none;
+    padding: 0;
+    width: auto;
   }
 
   .main-footer__link--vkontakte::before,
@@ -154,7 +160,12 @@
   }
 
   .htmlacademy-link::before {
-    left: 140px;
+    left: 136px;
+    top: 1px;
+  }
+
+  .logo img {
+    padding-right: 37px;
   }
 }
 
@@ -162,9 +173,15 @@
   .main-footer__wrapper {
     max-width: 1440px;
     padding: 66px 110px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 396px;
+    gap: 200px;
+  }
+
+  .main-footer__list {
+    width: 200px;
+    padding-top: 5px;
+  }
+
+  .logo {
+    padding: 6px 0 7px;
   }
 }

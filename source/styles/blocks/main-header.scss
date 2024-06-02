@@ -53,17 +53,24 @@
 
 @media screen and (min-width: $desktop-width) {
   .main-header {
-    padding: 55px 110px 0;
+    padding: 0;
+    padding-top: 55px;
   }
 
   .main-header__wrapper {
-    flex-direction: row;
+    display: flex;
     justify-content: space-between;
-    align-items: center;
+    max-width: 1440px;
+    padding: 0 110px;
   }
 
   .main-header__logo {
     grid-template-columns: 70px 1fr;
     gap: 14px;
+  }
+
+  .main-header__logo-text {
+    width: 118px;
+    height: 21px;
   }
 }

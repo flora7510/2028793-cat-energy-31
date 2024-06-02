@@ -177,14 +177,16 @@
 
 @media screen and (min-width: $tablet-width) {
   .example {
-    background: linear-gradient(#ffffff 50%, #eaeaea 50%);
+    background: linear-gradient(#ffffff 57%, #eaeaea 57%);
     width: 100%;
-    padding: 45px 30px 0;
+    padding: 45px 0 105px;
     box-sizing: border-box;
+    border-top: 1px solid #e6e6e6;
   }
 
   .example__wrapper {
-    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 30px;
   }
 
   .example__caption {
@@ -192,18 +194,6 @@
     line-height: 60px;
     margin-bottom: 60px;
     position: relative;
-  }
-
-  .example__caption::before {
-    content: "";
-    display: block;
-    position: absolute;
-    border: none;
-    width: 768px;
-    height: 1px;
-    background-color: #e6e6e6;
-    top: -30px;
-    left: -30px;
   }
 
   .example__description {
@@ -217,6 +207,7 @@
     flex-direction: row;
     justify-content: space-between;
     column-gap: 160px;
+    align-items: flex-start;
   }
 
   .example__list {
@@ -228,6 +219,7 @@
   .example__box {
     gap: 11px;
     min-width: 162px;
+    height: 71px;
   }
 
   .example__number {
@@ -245,17 +237,25 @@
     font-size: 14px;
     line-height: 14px;
     padding: 0;
+    background-color: #ffffff;
+    width: 135px;
+    top: 9px;
   }
 
   .example__text {
     font-size: 20px;
     line-height: 20px;
     text-align: right;
+    margin-top: 11px;
   }
 
   .example__price {
     display: block;
     margin-top: 9px;
+  }
+
+  .slider {
+    width: min(100%, 560px);
   }
 }
 
@@ -263,13 +263,15 @@
   .example {
     display: flex;
     gap: 224px;
-    background: linear-gradient(#ffffff 30%, #eaeaea 30px);
+    background: linear-gradient(#ffffff 31%, #f2f2f2 31%);
     width: 100%;
-    padding: 0 110px 75px;
+    padding: 69px 0;
   }
 
   .example__wrapper {
-    max-width: 1440px;
+    width: 1440px;
+    padding: 0 110px;
+    position: relative;
   }
 
   .example__caption {
@@ -278,6 +280,7 @@
 
   .example__description {
     margin-bottom: 69px;
+    width: 432px;
   }
 
   .example__container {
@@ -289,15 +292,27 @@
   .example__list {
     gap: 43px;
     margin: 0;
-    margin-bottom: 99px;
+    margin-bottom: 59px;
   }
 
   .example__text {
     display: flex;
     justify-content: space-between;
+    margin: 0;
+    gap: 63px;
   }
 
   .example__price {
     margin: 0;
+  }
+
+  .slider {
+    position: absolute;
+    margin: 0;
+    right: 110px;
+  }
+
+  .example__desc {
+    background-color: #f2f2f2;
   }
 }

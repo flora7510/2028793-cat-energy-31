@@ -93,7 +93,7 @@
     font-size: 20px;
     line-height: 20px;
     color: #000000;
-    margin-bottom: 47px;
+    margin-bottom: 49px;
     order: -2;
   }
 
@@ -114,13 +114,19 @@
 }
 
 @media screen and (min-width: $desktop-width) {
+  .promo {
+    position: static;
+  }
+
   .promo::before {
     content: "";
+    display: block;
     position: absolute;
-    top: -224px;
-    right: 70px;
-    width: 50%;
-    height: 694px;
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 50vw;
+    height: 691px;
     background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), image-set("../../images/index-bg-cat-desktop@1x.png" 1x, "../../images/index-bg-cat-desktop@2x.png" 2x);
     background-repeat: no-repeat;
     background-size: cover;
@@ -132,7 +138,12 @@
     max-width: 1440px;
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 0 110px;
+    padding: 110px 110px 164px;
+  }
+
+  .promo__wrapper picture {
+    top: 31px;
+    left: 557px;
   }
 
   .promo__caption {
@@ -143,7 +154,7 @@
 
   .promo__slogan {
     padding-left: 80px;
-    margin-bottom: 52px;
+    margin-bottom: 54px;
   }
 
   .promo__product {
