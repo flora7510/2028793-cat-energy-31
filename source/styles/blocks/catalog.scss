@@ -121,20 +121,24 @@
   position: relative;
 }
 
-.catalog__item--more::before {
-  content: "";
-  width: 30px;
-  height: 30px;
-  background-image: url("../../icons/stack.svg#icon_plus");
-  background-size: 30px 30px;
-  position: absolute;
-  background-repeat: no-repeat;
-  top: 25px;
-}
-
 .catalog__item--more .catalog__link {
   flex-direction: column;
   padding-top: 55px;
+}
+
+.catalog__item--more .catalog__link::before,
+.catalog__item--more .catalog__link::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #d3d3d3;
+  left: 125px;
+  top: 39px;
+}
+
+.catalog__item--more .catalog__link::after {
+  transform: rotate(90deg);
 }
 
 .catalog__item--more .catalog__title {
@@ -226,12 +230,12 @@
     box-sizing: border-box;
   }
 
-  .catalog__item--more::before {
+  .catalog__item--more .catalog__link::before,
+  .catalog__item--more .catalog__link::after {
+    content: "";
     width: 60px;
-    height: 60px;
-    background-size: 60px 60px;
-    top: 134px;
-    stroke-width: 2px;
+    left: 133px;
+    top: 161px;
   }
 
   .catalog__item-info {
@@ -298,7 +302,9 @@
     margin-bottom: 24px;
   }
 
-  .catalog-item--more::before {
-    top: 142px;
+  .catalog__item--more .catalog__link::before,
+  .catalog__item--more .catalog__link::after {
+    left: 93px;
+    top: 169px;
   }
 }
