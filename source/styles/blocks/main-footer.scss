@@ -25,9 +25,10 @@
   color: $special_dark-grey;
   font-weight: 400;
   text-decoration: none;
-  display: block;
   position: relative;
-  padding: 7px 167px 7px 0;
+  padding: 7px 0;
+  display: flex;
+  width: 280px;
 }
 
 .htmlacademy-link:hover,
@@ -157,6 +158,7 @@
 
   .htmlacademy-link {
     padding-right: 50px;
+    width: auto;
   }
 
   .htmlacademy-link::before {
